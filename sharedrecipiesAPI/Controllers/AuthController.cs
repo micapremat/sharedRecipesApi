@@ -33,6 +33,9 @@ namespace sharedrecipiesAPI.Controllers
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
             user.Username = userDto.Username;
+            user.Email = userDto.Email;
+            user.Name = userDto.Name;
+            user.Surname = userDto.Surname;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
